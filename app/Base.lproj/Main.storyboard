@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ClE-9x-bMQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5qA-SK-4Vt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ClE-9x-bMQ" customClass="TabBarController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="B6H-Bw-gQT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NPT-BN-6l4" kind="relationship" relationship="viewControllers" id="fzX-aT-95s"/>
+                        <segue destination="pFZ-Xt-5H0" kind="relationship" relationship="viewControllers" id="QtE-1j-jAa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFt-DY-Bod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="380"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Veo-Ys-iXE">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="NPT-BN-6l4" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bd7-tg-93B"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybH-0m-d6s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dPn-tn-9dR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hy7-3v-TYg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKC-ko-lQs">
+                                <rect key="frame" x="20" y="40" width="19" height="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="onBurger" destination="NPT-BN-6l4" eventType="touchUpInside" id="PPz-HP-z0C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw6-jZ-r7a">
+                                <rect key="frame" x="123" y="323" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hy7-3v-TYg" firstAttribute="leading" secondItem="dPn-tn-9dR" secondAttribute="leading" id="0Oe-xE-zWE"/>
+                            <constraint firstAttribute="trailing" secondItem="Hy7-3v-TYg" secondAttribute="trailing" id="29H-Oc-hGb"/>
+                            <constraint firstAttribute="centerY" secondItem="Bw6-jZ-r7a" secondAttribute="centerY" id="4Gs-Rb-h59"/>
+                            <constraint firstAttribute="bottom" secondItem="Hy7-3v-TYg" secondAttribute="bottom" id="HyL-hG-zbj"/>
+                            <constraint firstItem="Hy7-3v-TYg" firstAttribute="top" secondItem="dPn-tn-9dR" secondAttribute="top" id="Ibi-Kv-6qP"/>
+                            <constraint firstItem="MKC-ko-lQs" firstAttribute="top" secondItem="Bd7-tg-93B" secondAttribute="bottom" constant="20" id="Jy8-ko-e2G"/>
+                            <constraint firstAttribute="centerX" secondItem="Bw6-jZ-r7a" secondAttribute="centerX" id="QYH-O7-xSx"/>
+                            <constraint firstItem="MKC-ko-lQs" firstAttribute="leading" secondItem="dPn-tn-9dR" secondAttribute="leading" constant="20" id="b7r-F5-V0u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1mG-1D-Awx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="slV-51-UXU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jar-Xk-Gig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="171"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0oy-RG-ZZ0">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="pFZ-Xt-5H0" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9kF-GW-OLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="A0y-JU-sGh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NgN-aG-BUa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Mg4-8d-9Hi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geR-yE-H5N">
+                                <rect key="frame" x="20" y="40" width="19" height="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="onBurger" destination="pFZ-Xt-5H0" eventType="touchUpInside" id="Mtr-0q-vtd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPP-eU-5x4">
+                                <rect key="frame" x="121.5" y="323" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="geR-yE-H5N" firstAttribute="leading" secondItem="NgN-aG-BUa" secondAttribute="leading" constant="20" id="5gJ-G8-MBo"/>
+                            <constraint firstItem="geR-yE-H5N" firstAttribute="top" secondItem="9kF-GW-OLQ" secondAttribute="bottom" constant="20" id="9Zp-Df-hHg"/>
+                            <constraint firstAttribute="centerX" secondItem="OPP-eU-5x4" secondAttribute="centerX" id="OI3-oF-JKs"/>
+                            <constraint firstAttribute="trailing" secondItem="Mg4-8d-9Hi" secondAttribute="trailing" id="Rc0-Co-wgw"/>
+                            <constraint firstAttribute="bottom" secondItem="Mg4-8d-9Hi" secondAttribute="bottom" id="jwz-9w-EXX"/>
+                            <constraint firstItem="Mg4-8d-9Hi" firstAttribute="top" secondItem="NgN-aG-BUa" secondAttribute="top" id="qhb-uE-ZFJ"/>
+                            <constraint firstItem="Mg4-8d-9Hi" firstAttribute="leading" secondItem="NgN-aG-BUa" secondAttribute="leading" id="sAK-To-k8N"/>
+                            <constraint firstAttribute="centerY" secondItem="OPP-eU-5x4" secondAttribute="centerY" id="uOy-kr-RJG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UTl-ah-hB1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="MNM-VB-TEW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIv-DW-hgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.jpg" width="63" height="111"/>
+        <image name="burger" width="19" height="17"/>
+    </resources>
+</document>
