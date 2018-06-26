@@ -139,7 +139,6 @@
                         <outlet property="feedTableView" destination="Nbr-Em-thi" id="3Ou-M7-eru"/>
                         <outlet property="userImage" destination="DYX-Wl-BUw" id="URx-o9-9Ls"/>
                         <outlet property="userLabel" destination="WVf-GK-AFb" id="krZ-d9-Kkp"/>
-                        <segue destination="6QK-FA-ElH" kind="show" identifier="VideoVC" id="i1C-Ii-6yV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNE-K0-4Uu" sceneMemberID="firstResponder"/>
@@ -194,35 +193,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIv-DW-hgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1334" y="171"/>
-        </scene>
-        <!--Video PlayerVC-->
-        <scene sceneID="Goh-SS-8et">
-            <objects>
-                <viewController id="6QK-FA-ElH" customClass="YTVideoPlayerVC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Q4c-AA-l01" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klh-O1-DCG">
-                                <rect key="frame" x="41" y="176" width="292" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JsM-cO-hnA"/>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="klh-O1-DCG" id="Gkd-MW-YKB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjz-s5-Nk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>
