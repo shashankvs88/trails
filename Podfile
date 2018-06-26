@@ -6,6 +6,4 @@ target 'app' do
   # Pods for app
 	pod 'FrostedSidebar'
 	pod 'Alamofire'
-	pod 'YouTubePlayer'
-
 	end

@@ -15,7 +15,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 		moreNavigationController.navigationBar.isHidden = true
 		
 		sidebar = FrostedSidebar(itemImages: [
-			UIImage(named: "profile")!,
+			UIImage(named: "youtube")!,
 			UIImage(named: "star")!],
 			colors: [
 				UIColor(red: 240/255, green: 159/255, blue: 254/255, alpha: 1),

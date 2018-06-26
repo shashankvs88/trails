@@ -42,6 +42,10 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
 
+    @IBAction func onBurger() {
+        (tabBarController as! TabBarController).sidebar.showInViewController(self, animated: true)
+    }
+    
     
     @objc func refresh(sender:AnyObject) {
         // Code to refresh table view
@@ -116,12 +120,12 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
         
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 375, height: 300), configuration: webConfiguration)
+
         self.view.addSubview(webView)
         
         if let videoURL:URL = URL(string: "https://www.youtube.com/embed/\(videoList[indexPath.row].videoId)?playsinline=1") {
             let request:URLRequest = URLRequest(url: videoURL)
             webView.load(request)
-            
         }
 //
 //        let url = NSURL(string: "https://www.youtube.com/embed/\(videoList[indexPath.row].videoId)?autoplay=1")

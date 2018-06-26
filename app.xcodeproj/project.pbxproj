@@ -18,21 +18,20 @@
 		CF9DC08A20E1566000CC9DB9 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08320E1566000CC9DB9 /* star@2x.png */; };
 		CF9DC08B20E1566000CC9DB9 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08420E1566000CC9DB9 /* burger@2x.png */; };
 		CF9DC08C20E1566000CC9DB9 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08520E1566000CC9DB9 /* burger.png */; };
-		CF9DC08D20E1566000CC9DB9 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08620E1566000CC9DB9 /* profile.png */; };
 		CF9DC08E20E1566000CC9DB9 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08720E1566000CC9DB9 /* Background.jpg */; };
 		CF9DC08F20E1566000CC9DB9 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08820E1566000CC9DB9 /* star.png */; };
-		CF9DC09020E1566000CC9DB9 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08920E1566000CC9DB9 /* profile@2x.png */; };
+		DC28C18020E2929500C3B208 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = DC28C17E20E2929500C3B208 /* youtube.png */; };
+		DC28C18120E2929500C3B208 /* youtube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC28C17F20E2929500C3B208 /* youtube@2x.png */; };
 		DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */; };
 		DC5BB5EF20E1FA15007FF959 /* YTVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */; };
 		DC5BB5F120E1FA92007FF959 /* YTVideoBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */; };
 		DCF4E1DF20E2107700C72754 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */; };
-		DCF4E1E120E23AEC00C72754 /* YTVideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3876B4F8C419F8BD9AACA84F /* Pods_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB7A6595D513DA002C42CFE /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
-		CF6AF23220DC0700000A1B68 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6AF23220DC0700000A1B68 /* PRK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6AF23520DC0700000A1B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6AF23720DC0700000A1B68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF6AF23A20DC0700000A1B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,15 +43,14 @@
 		CF9DC08320E1566000CC9DB9 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "app/Images/star@2x.png"; sourceTree = SOURCE_ROOT; };
 		CF9DC08420E1566000CC9DB9 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "app/Images/burger@2x.png"; sourceTree = SOURCE_ROOT; };
 		CF9DC08520E1566000CC9DB9 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burger.png; path = app/Images/burger.png; sourceTree = SOURCE_ROOT; };
-		CF9DC08620E1566000CC9DB9 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = app/Images/profile.png; sourceTree = SOURCE_ROOT; };
 		CF9DC08720E1566000CC9DB9 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = app/Images/Background.jpg; sourceTree = SOURCE_ROOT; };
 		CF9DC08820E1566000CC9DB9 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = app/Images/star.png; sourceTree = SOURCE_ROOT; };
-		CF9DC08920E1566000CC9DB9 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "app/Images/profile@2x.png"; sourceTree = SOURCE_ROOT; };
+		DC28C17E20E2929500C3B208 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = youtube.png; path = app/Images/youtube.png; sourceTree = SOURCE_ROOT; };
+		DC28C17F20E2929500C3B208 /* youtube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "youtube@2x.png"; path = "app/Images/youtube@2x.png"; sourceTree = SOURCE_ROOT; };
 		DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTViewController.swift; sourceTree = "<group>"; };
 		DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTVideoModel.swift; sourceTree = "<group>"; };
 		DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTVideoBase.swift; sourceTree = "<group>"; };
 		DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTVideoPlayerVC.swift; sourceTree = "<group>"; };
 		FA2F63B5F223A0289E159529 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,7 @@
 		CF6AF23320DC0700000A1B68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF6AF23220DC0700000A1B68 /* app.app */,
+				CF6AF23220DC0700000A1B68 /* PRK.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +114,6 @@
 				DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */,
 				DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */,
 				CF6AF23920DC0700000A1B68 /* Main.storyboard */,
-				DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */,
 				CF6AF23C20DC0700000A1B68 /* Assets.xcassets */,
 				CF6AF23E20DC0700000A1B68 /* LaunchScreen.storyboard */,
 				CF6AF24120DC0700000A1B68 /* Info.plist */,
@@ -127,11 +124,11 @@
 		CF9DC08220E1564200CC9DB9 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				DC28C17E20E2929500C3B208 /* youtube.png */,
+				DC28C17F20E2929500C3B208 /* youtube@2x.png */,
 				CF9DC08720E1566000CC9DB9 /* Background.jpg */,
 				CF9DC08520E1566000CC9DB9 /* burger.png */,
 				CF9DC08420E1566000CC9DB9 /* burger@2x.png */,
-				CF9DC08620E1566000CC9DB9 /* profile.png */,
-				CF9DC08920E1566000CC9DB9 /* profile@2x.png */,
 				CF9DC08820E1566000CC9DB9 /* star.png */,
 				CF9DC08320E1566000CC9DB9 /* star@2x.png */,
 			);
@@ -158,7 +155,7 @@
 			);
 			name = app;
 			productName = app;
-			productReference = CF6AF23220DC0700000A1B68 /* app.app */;
+			productReference = CF6AF23220DC0700000A1B68 /* PRK.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,13 +200,13 @@
 				CF6AF24020DC0700000A1B68 /* LaunchScreen.storyboard in Resources */,
 				CF9DC08F20E1566000CC9DB9 /* star.png in Resources */,
 				CF9DC08B20E1566000CC9DB9 /* burger@2x.png in Resources */,
+				DC28C18020E2929500C3B208 /* youtube.png in Resources */,
 				CF9DC08A20E1566000CC9DB9 /* star@2x.png in Resources */,
 				CF9DC08C20E1566000CC9DB9 /* burger.png in Resources */,
-				CF9DC09020E1566000CC9DB9 /* profile@2x.png in Resources */,
 				CF6AF24820DC0B53000A1B68 /* GoogleService-Info.plist in Resources */,
 				CF6AF23D20DC0700000A1B68 /* Assets.xcassets in Resources */,
 				CF6AF23B20DC0700000A1B68 /* Main.storyboard in Resources */,
-				CF9DC08D20E1566000CC9DB9 /* profile.png in Resources */,
+				DC28C18120E2929500C3B208 /* youtube@2x.png in Resources */,
 				CF9DC08E20E1566000CC9DB9 /* Background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,15 +254,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ABWebView/ABWebView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FrostedSidebar/FrostedSidebar.framework",
-				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABWebView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FrostedSidebar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -281,7 +278,6 @@
 			files = (
 				DCF4E1DF20E2107700C72754 /* ImageTableViewCell.swift in Sources */,
 				DC5BB5EF20E1FA15007FF959 /* YTVideoModel.swift in Sources */,
-				DCF4E1E120E23AEC00C72754 /* YTVideoPlayerVC.swift in Sources */,
 				CF9DC08120E1539D00CC9DB9 /* TabBarController.swift in Sources */,
 				DC5BB5F120E1FA92007FF959 /* YTVideoBase.swift in Sources */,
 				DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */,
@@ -425,10 +421,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B46D34G39;
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prk.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PRK;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,10 +437,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B46D34G39;
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prk.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PRK;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
