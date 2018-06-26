@@ -22,6 +22,11 @@
 		CF9DC08E20E1566000CC9DB9 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08720E1566000CC9DB9 /* Background.jpg */; };
 		CF9DC08F20E1566000CC9DB9 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08820E1566000CC9DB9 /* star.png */; };
 		CF9DC09020E1566000CC9DB9 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08920E1566000CC9DB9 /* profile@2x.png */; };
+		DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */; };
+		DC5BB5EF20E1FA15007FF959 /* YTVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */; };
+		DC5BB5F120E1FA92007FF959 /* YTVideoBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */; };
+		DCF4E1DF20E2107700C72754 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */; };
+		DCF4E1E120E23AEC00C72754 /* YTVideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		CF9DC08720E1566000CC9DB9 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = app/Images/Background.jpg; sourceTree = SOURCE_ROOT; };
 		CF9DC08820E1566000CC9DB9 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = app/Images/star.png; sourceTree = SOURCE_ROOT; };
 		CF9DC08920E1566000CC9DB9 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "app/Images/profile@2x.png"; sourceTree = SOURCE_ROOT; };
+		DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTViewController.swift; sourceTree = "<group>"; };
+		DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTVideoModel.swift; sourceTree = "<group>"; };
+		DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTVideoBase.swift; sourceTree = "<group>"; };
+		DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTVideoPlayerVC.swift; sourceTree = "<group>"; };
 		FA2F63B5F223A0289E159529 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +111,12 @@
 				CF9DC08020E1539D00CC9DB9 /* TabBarController.swift */,
 				CF6AF23520DC0700000A1B68 /* AppDelegate.swift */,
 				CF6AF23720DC0700000A1B68 /* ViewController.swift */,
+				DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */,
+				DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */,
+				DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */,
+				DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */,
 				CF6AF23920DC0700000A1B68 /* Main.storyboard */,
+				DCF4E1E020E23AEC00C72754 /* YTVideoPlayerVC.swift */,
 				CF6AF23C20DC0700000A1B68 /* Assets.xcassets */,
 				CF6AF23E20DC0700000A1B68 /* LaunchScreen.storyboard */,
 				CF6AF24120DC0700000A1B68 /* Info.plist */,
@@ -135,6 +150,7 @@
 				CF6AF22F20DC0700000A1B68 /* Frameworks */,
 				CF6AF23020DC0700000A1B68 /* Resources */,
 				BEF4DF3C77555D7130401602 /* [CP] Embed Pods Frameworks */,
+				5ACE91631D039F8B7B4EC3F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +235,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5ACE91631D039F8B7B4EC3F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BEF4DF3C77555D7130401602 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,11 +257,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FrostedSidebar/FrostedSidebar.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FrostedSidebar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -244,7 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF4E1DF20E2107700C72754 /* ImageTableViewCell.swift in Sources */,
+				DC5BB5EF20E1FA15007FF959 /* YTVideoModel.swift in Sources */,
+				DCF4E1E120E23AEC00C72754 /* YTVideoPlayerVC.swift in Sources */,
 				CF9DC08120E1539D00CC9DB9 /* TabBarController.swift in Sources */,
+				DC5BB5F120E1FA92007FF959 /* YTVideoBase.swift in Sources */,
+				DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */,
 				CF6AF23820DC0700000A1B68 /* ViewController.swift in Sources */,
 				CF6AF23620DC0700000A1B68 /* AppDelegate.swift in Sources */,
 			);
