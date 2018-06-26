@@ -8,17 +8,21 @@
 
 import Foundation
 import UIKit
-import YouTubePlayer
-
+import WebKit
 
 class YTVideoPlayerVC : UIViewController  {
     
     
-    @IBOutlet var videoPlayer: YouTubePlayerView!
+    @IBOutlet weak var webView : WKWebView!
     var videoId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        videoPlayer.loadVideoID(videoId)
+        
+        
+        let url = NSURL(string: "https://www.youtube.com/watch?v=\(videoId)")
+        let requestObj = NSURLRequest(url: url! as URL)
+        webView.load(requestObj as URLRequest)
+        webView.scrollView.isScrollEnabled = false
     }
 }
