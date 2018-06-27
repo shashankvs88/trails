@@ -64,7 +64,8 @@ class PhotosViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailView = segue.destination as! PhotoDetailsViewController
+        let navVC = segue.destination  as! UINavigationController
+        let detailView = navVC.topViewController as! PhotoDetailsViewController
         let indexPath = tableView.indexPath(for: sender as!UITableViewCell)!
         
         let photoData = photoDataArray?[indexPath.row]

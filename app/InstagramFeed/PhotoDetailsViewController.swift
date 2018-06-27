@@ -16,8 +16,10 @@ class PhotoDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         photoImageView.setImageWith(photoUrl!)
+        UINavigationBar.appearance().barTintColor = UIColor.red
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         print("Detail View: \(photoUrl?.absoluteString)")
     }
 
@@ -26,13 +28,11 @@ class PhotoDetailsViewController: UIViewController {
     }
     
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "FullScreenPhotoSegue", sender: nil)
+        //performSegue(withIdentifier: "FullScreenPhotoSegue", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let fullScreenPhotoVC = segue.destination as! FullScreenPhotoViewController
-        
-        fullScreenPhotoVC.photoUrl = self.photoUrl
+    @IBAction func back(sender: UIBarButtonItem) {
+       dismiss(animated: true, completion: nil)
     }
     
 }
