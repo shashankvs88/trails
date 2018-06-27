@@ -20,6 +20,10 @@
 		CF9DC08C20E1566000CC9DB9 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08520E1566000CC9DB9 /* burger.png */; };
 		CF9DC08E20E1566000CC9DB9 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08720E1566000CC9DB9 /* Background.jpg */; };
 		CF9DC08F20E1566000CC9DB9 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9DC08820E1566000CC9DB9 /* star.png */; };
+		DC22B8AC20E3B9BB005175EC /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22B8AB20E3B9BB005175EC /* PhotosTableViewCell.swift */; };
+		DC22B8AE20E3B9FD005175EC /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22B8AD20E3B9FD005175EC /* PhotosViewController.swift */; };
+		DC22B8B120E3BBD1005175EC /* FullScreenPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22B8AF20E3BBD0005175EC /* FullScreenPhotoViewController.swift */; };
+		DC22B8B220E3BBD1005175EC /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22B8B020E3BBD0005175EC /* PhotoDetailsViewController.swift */; };
 		DC28C18020E2929500C3B208 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = DC28C17E20E2929500C3B208 /* youtube.png */; };
 		DC28C18120E2929500C3B208 /* youtube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC28C17F20E2929500C3B208 /* youtube@2x.png */; };
 		DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */; };
@@ -45,6 +49,10 @@
 		CF9DC08520E1566000CC9DB9 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burger.png; path = app/Images/burger.png; sourceTree = SOURCE_ROOT; };
 		CF9DC08720E1566000CC9DB9 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = app/Images/Background.jpg; sourceTree = SOURCE_ROOT; };
 		CF9DC08820E1566000CC9DB9 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = app/Images/star.png; sourceTree = SOURCE_ROOT; };
+		DC22B8AB20E3B9BB005175EC /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		DC22B8AD20E3B9FD005175EC /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		DC22B8AF20E3BBD0005175EC /* FullScreenPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewController.swift; sourceTree = "<group>"; };
+		DC22B8B020E3BBD0005175EC /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		DC28C17E20E2929500C3B208 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = youtube.png; path = app/Images/youtube.png; sourceTree = SOURCE_ROOT; };
 		DC28C17F20E2929500C3B208 /* youtube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "youtube@2x.png"; path = "app/Images/youtube@2x.png"; sourceTree = SOURCE_ROOT; };
 		DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTViewController.swift; sourceTree = "<group>"; };
@@ -105,14 +113,11 @@
 		CF6AF23420DC0700000A1B68 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				DC22B8AA20E3B8FE005175EC /* TabBar */,
+				DC22B8A920E3B8C5005175EC /* YTFeed */,
+				DC22B8A820E3B8AA005175EC /* InstagramFeed */,
 				CF9DC08220E1564200CC9DB9 /* supporting files */,
-				CF9DC08020E1539D00CC9DB9 /* TabBarController.swift */,
 				CF6AF23520DC0700000A1B68 /* AppDelegate.swift */,
-				CF6AF23720DC0700000A1B68 /* ViewController.swift */,
-				DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */,
-				DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */,
-				DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */,
-				DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */,
 				CF6AF23920DC0700000A1B68 /* Main.storyboard */,
 				CF6AF23C20DC0700000A1B68 /* Assets.xcassets */,
 				CF6AF23E20DC0700000A1B68 /* LaunchScreen.storyboard */,
@@ -133,6 +138,37 @@
 				CF9DC08320E1566000CC9DB9 /* star@2x.png */,
 			);
 			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		DC22B8A820E3B8AA005175EC /* InstagramFeed */ = {
+			isa = PBXGroup;
+			children = (
+				DC22B8AB20E3B9BB005175EC /* PhotosTableViewCell.swift */,
+				DC22B8AD20E3B9FD005175EC /* PhotosViewController.swift */,
+				DC22B8AF20E3BBD0005175EC /* FullScreenPhotoViewController.swift */,
+				DC22B8B020E3BBD0005175EC /* PhotoDetailsViewController.swift */,
+			);
+			path = InstagramFeed;
+			sourceTree = "<group>";
+		};
+		DC22B8A920E3B8C5005175EC /* YTFeed */ = {
+			isa = PBXGroup;
+			children = (
+				DC5BB5EA20E1F86E007FF959 /* YTViewController.swift */,
+				DC5BB5EE20E1FA15007FF959 /* YTVideoModel.swift */,
+				DC5BB5F020E1FA92007FF959 /* YTVideoBase.swift */,
+			);
+			path = YTFeed;
+			sourceTree = "<group>";
+		};
+		DC22B8AA20E3B8FE005175EC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CF9DC08020E1539D00CC9DB9 /* TabBarController.swift */,
+				CF6AF23720DC0700000A1B68 /* ViewController.swift */,
+				DCF4E1DE20E2107700C72754 /* ImageTableViewCell.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,10 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC22B8AE20E3B9FD005175EC /* PhotosViewController.swift in Sources */,
 				DCF4E1DF20E2107700C72754 /* ImageTableViewCell.swift in Sources */,
 				DC5BB5EF20E1FA15007FF959 /* YTVideoModel.swift in Sources */,
 				CF9DC08120E1539D00CC9DB9 /* TabBarController.swift in Sources */,
+				DC22B8B220E3BBD1005175EC /* PhotoDetailsViewController.swift in Sources */,
+				DC22B8B120E3BBD1005175EC /* FullScreenPhotoViewController.swift in Sources */,
 				DC5BB5F120E1FA92007FF959 /* YTVideoBase.swift in Sources */,
+				DC22B8AC20E3B9BB005175EC /* PhotosTableViewCell.swift in Sources */,
 				DC5BB5EB20E1F86E007FF959 /* YTViewController.swift in Sources */,
 				CF6AF23820DC0700000A1B68 /* ViewController.swift in Sources */,
 				CF6AF23620DC0700000A1B68 /* AppDelegate.swift in Sources */,

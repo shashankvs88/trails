@@ -145,3 +145,14 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 //        }
 //    }
 }
+
+
+extension UIImageView{
+    
+    func setImageWith(_ url: URL){
+        
+            if let data = NSData(contentsOf: url as URL) {
+                self.image = UIImage(data: data as Data)
+            }
+    }
+}
