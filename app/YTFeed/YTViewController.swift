@@ -1,28 +1,29 @@
 //
 //  ViewController.swift
-//  EditSoftDemo
 //
-//  Created by Saurabh Yadav on 31/01/17.
-//  Copyright © 2017 Saurabh Yadav. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 import WebKit
 
-class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VideoModelDelegate {
+class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VideoModelDelegate, FeedTableViewProtocol {
     
+    
+    var isMoreDataLoading = false
     var webView: WKWebView!
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     
     var videoList: [Video] = [Video]()
-    let model = YTVideoBase ()
-    var refreshControl: UIRefreshControl!
+    var model = YTVideoBase ()
+    var refreshControl: UIRefreshControl?
+    var loadingMoreView:InfiniteScrollActivityView?
+
     
     
-    @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +34,21 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         model.getFeedVideos()
         
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(self.refresh(sender:)), for:UIControlEvents.valueChanged)
-        feedTableView.addSubview(refreshControl)
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl!)
         
-        feedTableView.delegate = self
-        feedTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
+        loadingMoreView = InfiniteScrollActivityView(frame: frame)
+        loadingMoreView!.isHidden = true
+        tableView.addSubview(loadingMoreView!)
+        
+        var insets = tableView.contentInset
+        insets.bottom += InfiniteScrollActivityView.defaultHeight
+        tableView.contentInset = insets
     }
 
     @IBAction func onBurger() {
@@ -47,20 +56,29 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     
-    @objc func refresh(sender:AnyObject) {
+    @objc func refreshData(_ refreshControl: UIRefreshControl) {
         // Code to refresh table view
-        feedTableView.reloadData()
+        if (isMoreDataLoading == false) {
+            model.nextPageToken = ""
+        }
+        model.getFeedVideos()
+        tableView.reloadData()
         self.refreshControl?.endRefreshing()
         userLabel.text = videoList.first?.channelTitle
+        
     }
     
     func dataReady() {
         
         //access the video objects that hav been downloaded
+
+        let indexPath = isMoreDataLoading ?  IndexPath(row: self.videoList.count, section: 0) : IndexPath(row: 0, section: 0)
         self.videoList = self.model.videoArray
-        
+        self.isMoreDataLoading = false
         //tell the tableView to reload
-        feedTableView.reloadData()
+        tableView.reloadData()
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+        self.loadingMoreView!.stopAnimating()
     }
     
     
@@ -77,7 +95,7 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = self.feedTableView.dequeueReusableCell(withIdentifier: "imageCell") as! ImageTableViewCell
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "imageCell") as! ImageTableViewCell
             let videoTitle = videoList[indexPath.row].videoTitle
             let videoThumbnail = videoList[indexPath.row].videoThumbnailUrl
             cell.desclabel.text = videoTitle

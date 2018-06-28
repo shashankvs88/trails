@@ -12,7 +12,17 @@ let USER_ID = "200697590"
 // get from http://instagram.pixelunion.net/
 let ACCESS_TOKEN = "200697590.1677ed0.2657b3d4867b415abe5908665b11d5a2"
 
-class PhotosViewController: UIViewController {
+protocol FeedTableViewProtocol {
+    
+    func refreshData(_ refreshControl: UIRefreshControl)
+    
+    var refreshControl: UIRefreshControl? { get set }
+    var isMoreDataLoading: Bool  { get set }
+    var loadingMoreView:InfiniteScrollActivityView? { get set }
+    var tableView: UITableView! { get set }
+}
+
+class PhotosViewController: UIViewController , FeedTableViewProtocol {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
@@ -205,8 +215,9 @@ extension PhotosViewController: UITableViewDataSource, UITableViewDelegate {
      */
 }
 
-extension PhotosViewController: UIScrollViewDelegate {
-    // Display loading indicator when scroll to near end of table
+extension YTViewController  {
+    
+    // Display loading indicator when scroll to near end of table@nonobjc
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (!isMoreDataLoading) {
             // Calculate the position of one screen length before the bottom of the results
@@ -221,7 +232,6 @@ extension PhotosViewController: UIScrollViewDelegate {
                 let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
                 loadingMoreView?.frame = frame
                 loadingMoreView!.startAnimating()
-                
                 refreshData(refreshControl!)
             }
         }
