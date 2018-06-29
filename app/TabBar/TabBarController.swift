@@ -29,7 +29,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 		
 		sidebar = FrostedSidebar(itemImages: [
 			UIImage(named: "youtube")!,
-			UIImage(named: "star")!],
+			UIImage(named: "photos")!],
 			colors: [
 				UIColor(red: 240/255, green: 159/255, blue: 254/255, alpha: 1),
 				UIColor(red: 255/255, green: 137/255, blue: 167/255, alpha: 1)],

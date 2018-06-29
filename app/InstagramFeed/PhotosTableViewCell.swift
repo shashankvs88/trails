@@ -16,7 +16,7 @@ class PhotosTableViewCell: UITableViewCell {
         
         
         // User name
-        userName.frame = CGRect(x: 58, y: 15, width: 200, height: 30)
+        //userName.frame = CGRect(x: 58, y: 15, width: 200, height: 30)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

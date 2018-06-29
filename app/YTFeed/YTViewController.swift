@@ -7,12 +7,14 @@ import UIKit
 import AVFoundation
 import WebKit
 
-class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VideoModelDelegate, FeedTableViewProtocol {
+class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VideoModelDelegate, FeedTableViewProtocol, WKNavigationDelegate {
     
     
     var isMoreDataLoading = false
     var webView: WKWebView!
+    var  activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     
@@ -49,6 +51,7 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         var insets = tableView.contentInset
         insets.bottom += InfiniteScrollActivityView.defaultHeight
         tableView.contentInset = insets
+        self.closeButton.isHidden = true
     }
 
     @IBAction func onBurger() {
@@ -127,41 +130,47 @@ class YTViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       // self.performSegue(withIdentifier: "VideoVC", sender: videoList[indexPath.row].videoId)
-//        let webConfiguration = WKWebViewConfiguration()
-//        webConfiguration.allowsInlineMediaPlayback = true
-//        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-//        view = webView
-        
         let webConfiguration = WKWebViewConfiguration()
         webConfiguration.allowsInlineMediaPlayback = true
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
-        
-        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 375, height: 300), configuration: webConfiguration)
-
+        if webView != nil {
+        if self.view.subviews.contains(webView) {
+            webView.removeFromSuperview()
+            }
+        }
+        webView = WKWebView(frame: CGRect(x: 0, y: tableView.frame.origin.y, width: tableView.frame.width, height: 300), configuration: webConfiguration)
+        webView.backgroundColor =  UIColor.darkGray
+        webView.navigationDelegate = self
         self.view.addSubview(webView)
+        self.closeButton.isHidden = false
         
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator.center = self.webView.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        
+        webView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+
         if let videoURL:URL = URL(string: "https://www.youtube.com/embed/\(videoList[indexPath.row].videoId)?playsinline=1") {
             let request:URLRequest = URLRequest(url: videoURL)
             webView.load(request)
         }
-//
-//        let url = NSURL(string: "https://www.youtube.com/embed/\(videoList[indexPath.row].videoId)?autoplay=1")
-//        let requestObj = NSURLRequest(url: url! as URL)
-//        webView.load(requestObj as URLRequest)
-//        webView.scrollView.isScrollEnabled = false
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if let destination = segue.destination as? YTVideoPlayerVC {
-//            
-//            if let video = sender as? Video{
-//                destination.videoId = video.videoId
-//            }
-//        }
-//    }
+    func webView(_ webView: WKWebView,
+                 didFinish navigation: WKNavigation!) {
+        print("loaded")
+        activityIndicator.stopAnimating()
+    }
+    
+    @IBAction func closeWebView() {
+        webView.removeFromSuperview()
+        self.closeButton.isHidden = true
+
+    }
+    
 }
 
 

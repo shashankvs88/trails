@@ -47,29 +47,38 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVf-GK-AFb">
-                                        <rect key="frame" x="58" y="5" width="301" height="40"/>
+                                        <rect key="frame" x="58" y="5" width="257" height="40"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smg-EJ-Shp">
-                                        <rect key="frame" x="8" y="15" width="42" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smg-EJ-Shp">
+                                        <rect key="frame" x="8" y="15" width="42" height="22"/>
                                         <state key="normal" image="burger"/>
                                         <connections>
                                             <action selector="onBurger" destination="97W-Az-wmU" eventType="touchUpInside" id="n2F-90-tNi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxx-Re-Cwg">
+                                        <rect key="frame" x="335" y="9" width="32" height="32"/>
+                                        <state key="normal" image="cancel.png"/>
+                                        <connections>
+                                            <action selector="closeWebView" destination="97W-Az-wmU" eventType="touchUpInside" id="irn-re-IHT"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="smg-EJ-Shp" firstAttribute="top" secondItem="NFI-hw-dNK" secondAttribute="top" constant="15" id="0Nu-nq-0Fk"/>
-                                    <constraint firstAttribute="trailing" secondItem="WVf-GK-AFb" secondAttribute="trailing" constant="16" id="9J9-Bp-NxC"/>
+                                    <constraint firstAttribute="trailing" secondItem="WVf-GK-AFb" secondAttribute="trailing" constant="60" id="9J9-Bp-NxC"/>
                                     <constraint firstItem="WVf-GK-AFb" firstAttribute="leading" secondItem="smg-EJ-Shp" secondAttribute="trailing" constant="8" id="Dup-Pf-86O"/>
                                     <constraint firstItem="WVf-GK-AFb" firstAttribute="top" secondItem="NFI-hw-dNK" secondAttribute="top" constant="5" id="F3B-fi-Ix1"/>
                                     <constraint firstItem="smg-EJ-Shp" firstAttribute="leading" secondItem="NFI-hw-dNK" secondAttribute="leading" constant="8" id="K82-rE-y8R"/>
                                     <constraint firstAttribute="bottom" secondItem="WVf-GK-AFb" secondAttribute="bottom" constant="5" id="a4e-Wb-dv9"/>
                                     <constraint firstAttribute="height" constant="50" id="jdf-N0-aYy"/>
-                                    <constraint firstItem="WVf-GK-AFb" firstAttribute="centerX" secondItem="NFI-hw-dNK" secondAttribute="centerX" constant="21" id="mls-ti-qLJ"/>
+                                    <constraint firstItem="WVf-GK-AFb" firstAttribute="centerX" secondItem="NFI-hw-dNK" secondAttribute="centerX" constant="-1" id="mls-ti-qLJ"/>
+                                    <constraint firstItem="rxx-Re-Cwg" firstAttribute="top" secondItem="NFI-hw-dNK" secondAttribute="top" constant="9" id="uMI-5D-WTv"/>
+                                    <constraint firstAttribute="trailing" secondItem="rxx-Re-Cwg" secondAttribute="trailing" constant="8" id="wqM-nF-ysT"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="171" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nbr-Em-thi">
@@ -132,13 +141,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="closeButton" destination="rxx-Re-Cwg" id="ujl-MV-2Kd"/>
                         <outlet property="tableView" destination="Nbr-Em-thi" id="3Ou-M7-eru"/>
                         <outlet property="userLabel" destination="WVf-GK-AFb" id="krZ-d9-Kkp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNE-K0-4Uu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-793"/>
+            <point key="canvasLocation" x="573.60000000000002" y="-793.40329835082468"/>
         </scene>
         <!--Instagram Feed-->
         <scene sceneID="FKz-u9-ij4">
@@ -152,34 +162,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="451" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K4i-XY-AwD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="524" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K4i-XY-AwD">
                                 <rect key="frame" x="0.0" y="65" width="375" height="553"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="451" id="43t-lw-fL4" customClass="PhotosTableViewCell" customModule="PRK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="451"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="524" id="43t-lw-fL4" customClass="PhotosTableViewCell" customModule="PRK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="524"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43t-lw-fL4" id="kyF-AT-YeU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="450.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="523.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0q-mC-Wp4">
-                                                    <rect key="frame" x="66" y="23" width="340" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-v0-3Uz">
-                                                    <rect key="frame" x="0.0" y="66" width="414" height="414"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="524"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="photoImageView" destination="2Jg-v0-3Uz" id="faV-aO-TCK"/>
-                                            <outlet property="userName" destination="J0q-mC-Wp4" id="cyp-Wm-RqB"/>
                                             <segue destination="171-iG-2MO" kind="show" id="7gk-NY-bw5"/>
                                         </connections>
                                     </tableViewCell>
@@ -225,7 +227,7 @@
                             <constraint firstItem="K4i-XY-AwD" firstAttribute="top" secondItem="pWX-B1-4EK" secondAttribute="bottom" constant="45" id="2cR-xs-5Ev"/>
                             <constraint firstAttribute="trailing" secondItem="K4i-XY-AwD" secondAttribute="trailing" id="7oi-ag-MLj"/>
                             <constraint firstItem="iGF-m2-HHZ" firstAttribute="leading" secondItem="fgo-Ih-Uee" secondAttribute="leading" id="Dk7-Hv-CZX"/>
-                            <constraint firstItem="iGF-m2-HHZ" firstAttribute="top" secondItem="GQ3-6f-hAy" secondAttribute="top" constant="20" id="Ua4-te-YbY"/>
+                            <constraint firstItem="iGF-m2-HHZ" firstAttribute="top" secondItem="pWX-B1-4EK" secondAttribute="bottom" id="Ua4-te-YbY"/>
                             <constraint firstItem="b67-l5-6nE" firstAttribute="top" secondItem="K4i-XY-AwD" secondAttribute="bottom" id="cg7-t9-SmP"/>
                             <constraint firstItem="iGF-m2-HHZ" firstAttribute="trailing" secondItem="fgo-Ih-Uee" secondAttribute="trailing" id="iqp-uz-pcm"/>
                             <constraint firstItem="K4i-XY-AwD" firstAttribute="leading" secondItem="fgo-Ih-Uee" secondAttribute="leading" id="oVZ-bx-hKW"/>
@@ -314,5 +316,6 @@
     </scenes>
     <resources>
         <image name="burger" width="19" height="17"/>
+        <image name="cancel.png" width="32" height="32"/>
     </resources>
 </document>

@@ -218,7 +218,7 @@ extension PhotosViewController: UITableViewDataSource, UITableViewDelegate {
 extension YTViewController  {
     
     // Display loading indicator when scroll to near end of table@nonobjc
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (!isMoreDataLoading) {
             // Calculate the position of one screen length before the bottom of the results
             let scrollViewContentHeight = tableView.contentSize.height
