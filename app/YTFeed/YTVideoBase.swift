@@ -17,7 +17,7 @@ protocol VideoModelDelegate {
 class YTVideoBase {
     
     let API_KEY = "AIzaSyAoWHEmq7YsNWephdjh4mTIgIDaq07kwmY" // YouTube API key from console
-    let UPLOADS_PLAYLIST_ID = "PLivjPDlt6ApTqKN6DbR-GOM5omen0Xm2a"   // YouTube playlist url id // national geographic channel ocean playlist
+    let CHANNEL_ID = "UCPSb5hoJuGd_M421vocSM2A"   // YouTube playlist url id
     
 
     let YOUTUBE_PLAYLIST_URL = "https://www.googleapis.com/youtube/v3/search"
@@ -30,7 +30,7 @@ class YTVideoBase {
     func getFeedVideos() {
         
         //fetch the video dynamically through the YouTube Data API
-        Alamofire.request((YOUTUBE_PLAYLIST_URL), parameters: ["part":"snippet","order":"viewCount", "channelId":"UCLFiirHOF-wa3QRExEa4m8A","maxResults":"50","pageToken":nextPageToken ?? "","key":API_KEY], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request((YOUTUBE_PLAYLIST_URL), parameters: ["part":"snippet","order":"viewCount", "channelId":CHANNEL_ID,"maxResults":"50","pageToken":nextPageToken ?? "","key":API_KEY], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
             if let JSON = response.result.value {
                 if let token = (JSON as! NSDictionary)["nextPageToken"] as? String {
